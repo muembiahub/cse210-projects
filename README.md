@@ -27,7 +27,13 @@ I am passionate about software development and constantly seeking to improve my 
 - Email: jonathanmuembia3@gmail.com , jmuembia@byupathway.edu 
 - LinkedIn: [Jonathan Muembia](https://www.linkedin.com/in/jonathanmuembia)
 - GitHub: [jonathanmuembia](https://github.com/jonathanmuembia)
+- Facebook: [Jonathan Muembia](https://www.facebook.com/jonathanmuembia)
 
+## Mission Experience
+
+I served a full-time mission for The Church of Jesus Christ of Latter-day Saints in the Democratic Republic of the Congo. During my mission, I developed strong communication and leadership skills, learned to work effectively in a team, and gained a deep appreciation for service and community. This experience has greatly influenced my personal and professional growth. 
+## Beliefs
+I am a member of The Church of Jesus Christ of Latter-day Saints. My faith plays a significant role in my life and guides my values and decisions. I strive to live by principles of honesty, integrity, and service to others.
 ## Certifications
 
 - Coursera: Python for Everybody
