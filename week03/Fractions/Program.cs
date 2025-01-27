@@ -25,11 +25,8 @@ public class Fraction
         string text = $"{_numerator / _denominator}";// Get the decimal value
         return text;// Return the decimal value
     }
-
-}
     public double GetDecimalValue()
     {// Method to get the decimal value of the fraction
         return (double)_numerator / _denominator;// Return the decimal value
     }
-
 }
