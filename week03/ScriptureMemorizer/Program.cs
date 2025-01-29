@@ -1,17 +1,40 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using System.Security.Cryptography.X509Certificates;
 public class Program
 {
     static void Main(string[] args)
     {
-        // Your main program logic here
+        Reference reference = new Reference("John", 3, 16);
+        Scripture scripture = new Scripture(reference, "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.");
+
+
+        while (true)
+        {
+            scripture.Display();
+            Console.WriteLine("\nPress Enter to hide words or type 'quit' to end.");
+            string input = Console.ReadLine();
+
+            if (input.ToLower() == "quit")
+            {
+                break;
+            }
+
+            scripture.HideRandomWords();
+
+            if (scripture.AllWordsHidden())
+            {
+                scripture.Display();
+                Console.WriteLine("\nAll words are hidden. Program will end.");
+                break;
+            }
+        }
     }
 }
-
-public class Scripture
-{
+// Path: week03/ScriptureMemorizer/Scripture.cs
+public class Scripture 
+{ // class definition goes here
     private Reference _reference;
     private List<Word> _words;
 
@@ -47,14 +70,14 @@ public class Scripture
 
 public class Reference
 {
-    private string _book;
-    private int _chapter;
-    private int _startVerse;
-    private int _endVerse;
+    private string _book; // e.g. John
+    private int _chapter; // e.g. 3
+    private int _startVerse; // e.g. 16
+    private int _endVerse; // e.g. 16
 
     public Reference(string book, int chapter, int startVerse, int? endVerse = null)
     {
-        _book = book;
+        _book = book; // 
         _chapter = chapter;
         _startVerse = startVerse;
         _endVerse = endVerse ?? startVerse;
