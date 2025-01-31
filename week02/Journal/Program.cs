@@ -3,6 +3,61 @@ using System.Collections.Generic; // Add this line to use List
 using System.IO; // Add this line to use StreamWriter and StreamReader
 using System.Text; // Add this line to use StringBuilder
 namespace Resumes // Add this line to declare the namespace
+/// <summary>
+/// This program is a simple journal application that allows users to create, display, save, and load journal entries.
+/// It also includes a feature to open the journal in Excel and a special Thanksgiving prompt.
+/// </summary>
+
+/// <summary>
+/// The main entry point for the application.
+/// </summary>
+/// <param name="args">The command-line arguments.</param>
+
+/// <summary>
+/// Represents a journal that contains multiple entries.
+/// </summary>
+
+/// <summary>
+/// Adds a new entry to the journal with a random prompt.
+/// </summary>
+
+/// <summary>
+/// Displays all the entries in the journal.
+/// </summary>
+
+/// <summary>
+/// Saves the journal entries to a file.
+/// </summary>
+/// <param name="filename">The name of the file to save the journal entries to.</param>
+
+/// <summary>
+/// Loads journal entries from a file.
+/// </summary>
+/// <param name="filename">The name of the file to load the journal entries from.</param>
+
+/// <summary>
+/// Opens the journal entries in Excel.
+/// </summary>
+
+/// <summary>
+/// Adds a Thanksgiving entry to the journal.
+/// </summary>
+
+/// <summary>
+/// Represents a single journal entry.
+/// </summary>
+
+/// <summary>
+/// Gets or sets the date of the journal entry.
+/// </summary>
+
+/// <summary>
+/// Gets or sets the prompt of the journal entry.
+/// </summary>
+
+/// <summary>
+/// Gets or sets the response of the journal entry.
+/// </summary>
 {
         class Program
     {
