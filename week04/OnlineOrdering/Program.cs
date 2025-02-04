@@ -11,7 +11,7 @@ public class Program
         
         // Create addresses
         Address address1 = new Address("348 Kinshasa Bld", "Togo", "IL Arizona", "USA");
-        Address address2 = new Address("19086 Lubumbashi Rdc", "Congo Kinshasa", "France", "Canada");
+        Address address2 = new Address("19086 Lubumbashi Rdc", "Congo Kinshasa", "FranceS", "Canada");
 
         // Create customers
         Customer customer1 = new Customer("Jonathan Muembia", address1);
