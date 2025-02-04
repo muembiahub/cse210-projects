@@ -1,23 +1,16 @@
 using System;
-using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
 public class Program
 {
     public static void Main()
         {
-        // Create wellcome message 
         Console.WriteLine("Welcome to you (All)");
-        
-        // Create addresses
-        Address address1 = new Address("348 Kinshasa Bld", "Togo", "IL Arizona", "USA");
-        Address address2 = new Address("19086 Lubumbashi Rdc", "Congo Kinshasa", "FranceS", "Canada");
+        Address address1 = new Address("348 Kinshasa Bld", "Togo", " Arizona", "USA");
+        Address address2 = new Address("19086 Lubumbashi Rdc", "Congo Kinshasa", "FranceS", "Cameroon");
 
-        // Create customers
         Customer customer1 = new Customer("Jonathan Muembia", address1);
         Customer customer2 = new Customer("Sarah Muembia", address2);
-
-        // Create products
         Product product1 = new Product("Milk", "Lg45", 30.0, 3);
         Product product2 = new Product("Cookies", "94Tg", 60.0, 2);
         Product product3 = new Product("Apple", "Gt789", 105.0, 1);
@@ -38,9 +31,6 @@ public class Program
         System.Console.WriteLine(order1.GetShippingLabel());
         System.Console.WriteLine("Order 1 Total Cost:");
         System.Console.WriteLine(order1.GetTotalCost());
-
-        System.Console.WriteLine();
-
         System.Console.WriteLine("Order 2  Label:");
         System.Console.WriteLine(order2.GetPackingLabel());
         System.Console.WriteLine("Order 2  Label:");
