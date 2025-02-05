@@ -8,8 +8,8 @@ class OnligneOrdering
         Customer customer = new Customer("Cristoph Nkole", address);
         Order order = new Order(customer);
 
-        Product product1 = new Product("Desktop", "5366", 999.99 $, 1);
-        Product product2 = new Product("Mouse", "B456", 25.50 $, 2);
+        Product product1 = new Product("Desktop", "5366", 999.99, 1);
+        Product product2 = new Product("Mouse", "B456", 25.50 , 2);
 
         order.AddProduct(product1);
         order.AddProduct(product2);
