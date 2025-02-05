@@ -5,7 +5,7 @@ class OnligneOrdering
     static void Main(string[] args)
     {
 // Create instances of Address for different customers
-        Address address1 = new Address("luano", "lubumbashi", "Haut-katanga", "DRCongo");
+        Address address1 = new Address("Luano", "lubumbashi", "Haut-katanga", "DRCongo");
         Address address2 = new Address("1 Microsoft Way", "Redmond", "WA 98052", "USA");
         Address address3 = new Address("789 Pine Road","Montreal", "QC H2X 3Y7","Canada");
         Customer customer1 = new Customer("Cristoph Nkole", address1);
@@ -143,7 +143,8 @@ class Order
         string label = $"Packing Label: \n";
         foreach (var product in Products)
         {
-            label += $"Product : {product.Name} ID: {product.ProductId})\n";
+            label += $"Product: {product.Name}\n";
+            label += $"ID: {product.ProductId}\n";
         }
         return label;
     }
