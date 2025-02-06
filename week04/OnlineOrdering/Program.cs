@@ -8,7 +8,7 @@ class OnligneOrdering
         Address address1 = new Address("Luano", "lubumbashi", "Haut-katanga", "DRCongo");
         Address address2 = new Address("1 Microsoft Way", "Redmond", "WA 98052", "USA");
         Address address3 = new Address("789 Pine Road","Montreal", "QC H2X 3Y7","Canada");
-        Customer customer1 = new Customer("Cristoph Nkole", address1);
+        Customer customer1 = new Customer("Cris Nkole", address1);
         Customer customer2 = new Customer("Sarah Muembia", address2);
         Customer customer3 = new Customer("Jonathan Muembia", address3);
         Order order1 = new Order(customer1);

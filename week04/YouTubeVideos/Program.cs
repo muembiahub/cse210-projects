@@ -1,68 +1,74 @@
 using System;
 using System.Collections.Generic;
-class Program
+
+class YouTubeVideos
 {
-    static void Main(string[] args)
+    static void Main(string[]args)
     {
-        Console.WriteLine("Welcome to our program");
-        List<Video> videos = new List<Video>();
-        Video video1 = new Video { Title = "Casa de Papel", Author = "Professor", Length = 100 };
-        video1.AddComment(new Comment { Name = "Bernice team", Text = "Great Team movie!" });
-        video1.AddComment(new Comment { Name = "Martin king", Text = "Enjoying, thanks!" });
-        video1.AddComment(new Comment {Name = "Gerge Bouche", Text = "Thanks for updating this for us "});
-        
-        Video video2 = new Video { Title = "Tony Star", Author = "Jane Smith", Length = 60 };
-        video2.AddComment(new Comment { Name = "Sachard", Text = "Excellent guide." });
-        video2.AddComment(new Comment { Name = "Joe", Text = "Thanks for the tips!" });
-        Console.WriteLine("First Movie");
-        videos.Add(video1);
-        videos.Add(video2);
+        // Create comments
+        Comment comment1 = new Comment("Eddy","The stunts in this movie are unbelievable! The car chase scenes are out of this world.");
+        Comment comment2 = new Comment("Ephraim", "John McClane is such a badass. He makes jumping off a building look easy!");
+        Comment  comment3 = new Comment("Eugenie","This movie is a laugh riot. The awkward teenage antics are so relatable.");
+    // create videos 
+       Video video1 = new Video("Mad Max"); //
+       Video video2 = new Video("Die Hard");
+       Video video3 = new Video ("Superbad");
+    // Add comments to Videos
+       video1.Addcomment(comment1);
+       video2.Addcomment(comment2);
+       video3.Addcomment(comment3);
+    // Display video Details
+       Console.WriteLine("Welcome to our Label Movies ");
+       Console.WriteLine("\nPress Enter to Contunue.");
+       Console.ReadLine();
+       Console.WriteLine("First Movie");
+       Console.WriteLine(video1.GetVideoDetails());
+       Console.WriteLine("\nPress Enter to Contunue.");
+       Console.ReadLine();
+       Console.WriteLine("Second Movie");
+       Console.WriteLine(video2.GetVideoDetails());
+    Console.WriteLine("\nPress Enter to Contunue."); // Prompt user to press Enter to continue to the next movie
+       Console.ReadLine(); 
+       Console.WriteLine("Third Movie");// 
+       Console.WriteLine(video3.GetVideoDetails());
+       Console.WriteLine("Good bye bye");
 
-        foreach (var video in videos)
+    }
+}
+class Video
+{
+    public string Title{ get; set; }
+    public List<Comment> Comments { get; set; }
+
+    public Video (string title)
+    {
+        Title = title;
+        Comments = new List<Comment>();
+    }
+    public void Addcomment(Comment comment)
+    {
+        Comments.Add(comment);
+    }
+    public string GetVideoDetails()
+    {
+        string details = $"Title : {Title}\n";
+        foreach (var comment in Comments)
         {
-            Console.WriteLine($"Title: {video.Title}");
-            Console.WriteLine($"Author: {video.Author}");
-            Console.WriteLine($"Length: {video.Length} minutes");
-            Console.WriteLine($"Number of Comments: {video.NumberOfComments()}");
-            Console.WriteLine("Here is the name of those who comment and their names:");
-
-            foreach (var comment in video.GetComments())
-            {
-                
-                Console.WriteLine($"Name  : {comment.Name}.");
-                Console.WriteLine($"Comment : {comment.Text}.");
-            }
-
-            Console.WriteLine();
+            details += $"Author Name:{comment.Author}\n";
+            details += $"Comment:  {comment.Content}";
         }
+        return details;
     }
 }
 class Comment
-{ 
-    public string Name { get; set; } 
-    public string Text { get; set; }
-}
-
-class Video
 {
-    public string Title { get; set; }
     public string Author { get; set; }
-    public int Length { get; set; }
-    private List<Comment> comments = new List<Comment>();
+    public string Content { get; set; }
 
-    public void AddComment(Comment comment)
+    public Comment(string author, string content)
     {
-        comments.Add(comment);
+        Author = author;
+        Content = content;
     }
-
-    public int NumberOfComments()
-    {
-        return comments.Count;
-    }
-
-    public List<Comment> GetComments()
-    {
-        return comments;
-    }
-   
 }
+
