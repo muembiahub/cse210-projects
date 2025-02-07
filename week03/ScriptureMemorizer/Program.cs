@@ -1,37 +1,65 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 public class Program
 {
     static void Main(string[] args)
     {
-        Reference reference = new Reference("John", 3, 16);
-        Scripture scripture = new Scripture(reference, "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.");
-
+        Reference reference1 = new Reference("John", 3, 16);
+        Scripture scripture1 = new Scripture(reference1, "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.");
+        // Create a new scripture object to demonstrate creativity on the project
+        // the program combine two scriptures and display them in a random order and hide some words
+        // the program will display the first scripture and hide some words and then display the second scripture and hide some words
+        // the program will continue to display the scriptures until all words are hidden
+        Reference reference2 = new Reference("Jacod", 2, 17);
+        Scripture scripture2 = new Scripture(reference2, "Think of your brethren like unto yourselves, and be familiar with all and free with your substance, that they may be rich like unto you.");
+        bool hideFirstScripture = true;
+   // Display the first scripture and hide some words
 
         while (true)
         {
-            scripture.Display();
+            if (hideFirstScripture)
+            {
+            scripture1.Display();
             Console.WriteLine("\nPress Enter to hide words or type 'quit' to end.");
             string input = Console.ReadLine();
-
+// End the program if the user types 'quit'
             if (input.ToLower() == "quit")
             {
                 break;
             }
-
-            scripture.HideRandomWords();
-
-            if (scripture.AllWordsHidden())
+// Hide random words in the first scripture
+            scripture1.HideRandomWords();
+            if (scripture1.AllWordsHidden())
             {
-                scripture.Display();
+                scripture1.Display();
+                Console.WriteLine($"\nAll words are hidden. Program will end.");
+                hideFirstScripture = false;
+            }
+        }
+        else
+        {  
+// Display the second scripture and hide some words
+// Display the second scripture and hide some words
+            scripture2.Display();
+            Console.WriteLine("\nPress Enter to hide words or type 'quit' to end.");
+            string input = Console.ReadLine();
+            if (input.ToLower() == "quit")
+            {
+                break;
+            }
+// Hide random words in the second scripture
+            scripture2.HideRandomWords();
+            if (scripture2.AllWordsHidden())
+            {
+// Display the second scripture and hide some words
+                scripture2.Display();
                 Console.WriteLine("\nAll words are hidden. Program will end.");
                 break;
             }
         }
+        hideFirstScripture = !hideFirstScripture;
     }
 }
-// Path: week03/ScriptureMemorizer/Scripture.cs
 public class Scripture 
 { // class definition goes here
     private Reference _reference;
@@ -113,4 +141,5 @@ public class Word
     {
         return _isHidden;
     }
+}
 }
